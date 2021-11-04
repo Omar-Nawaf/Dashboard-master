@@ -35,7 +35,8 @@ new Chart(ordersChart, {
             legend: {
                 display: false
             }
-        }
+        },
+        maintainAspectRatio: false
     }
 });
 
@@ -70,11 +71,36 @@ new Chart(visitorChart, {
             legend: {
                 display: true
             }
-        }
+        },
+        maintainAspectRatio: false
     },
 });
 // Liner Chart for Cities
-var citiesChart = document.getElementById("myPieChart");
+const citiesChart = document.getElementById("myPieChart");
+
+const dataPie = [30,20,40,10];
+const labels = ['Riyadh', 'Jeddah', 'Sharqiah', 'Mecca']
+
+new Chart(citiesChart, {
+    type: 'pie',
+    data: {
+        labels: labels,
+        datasets: [{
+            data: dataPie,
+            backgroundColor: [
+                'rgba(218, 65, 103, 0.5)',
+                'rgba(64, 29, 186, 0.5)',
+                'rgba(218, 65, 103, 1)',
+                'rgba(64, 29, 186, 1)'
+                
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options: {
+        maintainAspectRatio: false
+    }
+})
 
 // Liner Chart for Rat
 const ratChart = document.getElementById("myLinearChart");
@@ -108,6 +134,7 @@ new Chart(ratChart, {
             legend: {
                 display: false
             }
-        }
+        },
+        maintainAspectRatio: false
     },
 });
