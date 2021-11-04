@@ -15,9 +15,9 @@ new Chart(ordersChart, {
             data: dataArea,
             fill: true,
             backgroundColor:['rgba(64, 29, 186, 0.5)'],
-            borderColor: ['rgba(218, 65, 103, 1)'],
+            borderColor: ['rgba(218, 65, 103, 0.7)'],
             tension: '0.2',
-            pointBackgroundColor: 'rgba(218, 65, 103, 1)'
+            pointBackgroundColor: 'rgba(218, 65, 103, 0.7)'
         }]
     },
     options: {
@@ -52,13 +52,13 @@ new Chart(visitorChart, {
         datasets: [{
             label: 'Men',
             data: dataVisitor1,
-            borderColor: 'rgba(64, 29, 186, 1)',
-            backgroundColor: 'rgba(64, 29, 186, 1)'
+            borderColor: 'rgba(64, 29, 186, 0.7)',
+            backgroundColor: 'rgba(64, 29, 186, 0.7)'
         }, {
             label: 'Women',
             data: dataVisitor2,
-            borderColor: 'rgba(218, 65, 103, 1)',
-            backgroundColor: 'rgba(218, 65, 103, 1)'
+            borderColor: 'rgba(218, 65, 103, 0.7)',
+            backgroundColor: 'rgba(218, 65, 103, 0.7)'
         }]
     },
     options: {
@@ -90,8 +90,8 @@ new Chart(citiesChart, {
             backgroundColor: [
                 'rgba(218, 65, 103, 0.5)',
                 'rgba(64, 29, 186, 0.5)',
-                'rgba(218, 65, 103, 1)',
-                'rgba(64, 29, 186, 1)'
+                'rgba(218, 65, 103, 0.7)',
+                'rgba(64, 29, 186, 0.7)'
                 
             ],
             hoverOffset: 4
@@ -114,9 +114,9 @@ new Chart(ratChart, {
             data: dataRat,
             fill: true,
             backgroundColor:'rgba(64, 29, 186, 0.1)',
-            borderColor: 'rgba(218, 65, 103, 1)',
+            borderColor: 'rgba(218, 65, 103, 0.7)',
             tension: '0.2',
-            pointBackgroundColor: 'rgba(218, 65, 103, 1)'
+            pointBackgroundColor: 'rgba(218, 65, 103, 0.7)'
         }]
     },
     options: {
@@ -138,3 +138,8 @@ new Chart(ratChart, {
         maintainAspectRatio: false
     },
 });
+
+
+$(document).ready(function() {
+    $('#customerstable').DataTable();
+} );
