@@ -57,4 +57,40 @@ const products = [
   },
 ];
 
+let productsHTML = document.getElementById("products");
+
+productsHTML.innerHTML = products.map(card =>
+  <div class="row mb-4">
+    <div class="col">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-3">
+              <img src="${card.image}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-6">
+              <div class="card-body">
+                  <h5 class="card-title">
+                      ${card.name}
+                  </h5>
+                  <p class="card-text">
+                      ${card.text}
+                  </p>
+              </div>
+          </div>
+          <div class="col-3">
+              <h5>
+                  ${card.price}
+              </h5>
+              <p>
+                  ${card.status}
+              </p>
+              <button class="btn bg-purple">Details</button>
+              <button class="btn bg-pink">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 
