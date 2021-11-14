@@ -73,7 +73,7 @@ productsHTML.innerHTML = products.map(card =>
                       ${card.name}
                   </h5>
                   <p class="card-text">
-                      ${card.text}
+                      ${card.description}
                   </p>
               </div>
           </div>
